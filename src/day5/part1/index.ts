@@ -8,6 +8,8 @@ const COLUMN_AMOUNT = 1000;
 
 const initalArray = initArray(ROW_AMOUNT, COLUMN_AMOUNT);
 const lines = parseData(DATA_PATH);
+console.log(lines);
+
 const filteredLines = filterArray(lines);
 
-export default console.log(countCross(fillArray(initalArray, filteredLines)));
+export default console.log(countCross(fillArray(initalArray, lines)));

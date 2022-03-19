@@ -28,7 +28,7 @@ export const fillArray = (initArray: number[][], lines: number[][]) => {
           line[1]++;
         }
       }
-    } else {
+    } else if (line[1] === line[3]) {
       if (line[0] > line[2]) {
         while (line[2] <= line[0]) {
           initArray[line[0]][line[1]] += 1;
@@ -40,8 +40,37 @@ export const fillArray = (initArray: number[][], lines: number[][]) => {
           line[0]++;
         }
       }
+    } else if (line[0] > line[2]) {
+      if (line[1] > line[3]) {
+        while (line[0] >= line[2] && line[1] >= line[3]) {
+          initArray[line[2]][line[3]] += 1;
+          line[3]++;
+          line[2]++;
+        }
+      } else {
+        while (line[0] >= line[2] && line[1] <= line[3]) {
+          initArray[line[2]][line[3]] += 1;
+          line[3]--;
+          line[2]++;
+        }
+      }
+    } else {
+      if (line[1] > line[3]) {
+        while (line[0] <= line[2] && line[1] >= line[3]) {
+          initArray[line[2]][line[3]] += 1;
+          line[3]++;
+          line[2]--;
+        }
+      } else {
+        while (line[0] <= line[2] && line[1] <= line[3]) {
+          initArray[line[2]][line[3]] += 1;
+          line[3]--;
+          line[2]--;
+        }
+      }
     }
   });
+  console.log(initArray.map((el) => el.join(',')));
   return initArray;
 };
 
