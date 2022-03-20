@@ -1,3 +1,3 @@
-import result from './day5/part1';
+import result from './day6/part2';
 
 result;
