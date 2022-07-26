@@ -7,8 +7,6 @@ export const retrieveData = (relativePath: string): string => {
 };
 
 export const parseToArray = (data: string): Array<string> => {
-  const parsedData: Array<string> = data
-    .replace(/(\r\n|\r|\n)/gm, '/')
-    .split('/');
+  const parsedData: Array<string> = data.split(',');
   return parsedData;
 };
