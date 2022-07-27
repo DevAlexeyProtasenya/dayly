@@ -1,16 +1,10 @@
-import {
-  getFuel,
-  getFuelPart2,
-  getHorisontalPositions,
-} from './utils/countFuel';
+import { getData } from './utils/utils';
 
-const horizontalPositions = getHorisontalPositions().sort(
-  (a: number, b: number) => a - b,
+const lengths = [2, 3, 4, 7];
+
+console.log(
+  getData()
+    .join(' ')
+    .split(' ')
+    .filter((el: string) => lengths.includes(el.length)).length,
 );
-
-const max = Math.max(...horizontalPositions);
-const fuels: number[] = [];
-for (let i = 0; i < max; i++) {
-  fuels.push(getFuelPart2(horizontalPositions, i));
-}
-console.log(Math.min(...fuels));

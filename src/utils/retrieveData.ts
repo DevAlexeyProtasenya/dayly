@@ -10,3 +10,10 @@ export const parseToArray = (data: string): Array<string> => {
   const parsedData: Array<string> = data.split(',');
   return parsedData;
 };
+
+export const parseData = (data: string): Array<string> => {
+  const parsedData: Array<string> = data
+    .replace(/(\r\n|\r|\n)/gm, '/')
+    .split('/');
+  return parsedData;
+};
