@@ -1,3 +1,3 @@
-import { number } from './day8';
+import { getResult } from './day9';
 
-console.log(number);
+console.log(getResult());
