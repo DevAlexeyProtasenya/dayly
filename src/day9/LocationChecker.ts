@@ -53,12 +53,12 @@ export class LocationChecker {
         return false;
     }
 
-    getResult() {
-        return this.checkIsBottomSmaller() ||
+    isSmaller() {
+        return !(
+            this.checkIsBottomSmaller() ||
             this.checkIsLeftSmaller() ||
             this.checkIsRightSmaller() ||
             this.checkIsTopSmaller()
-            ? 0
-            : this.array[this.top][this.left] + 1;
+        );
     }
 }
