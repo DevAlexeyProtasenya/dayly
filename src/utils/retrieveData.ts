@@ -16,7 +16,9 @@ const splitToRows = (): Array<string> => {
     return rows;
 };
 
-export const splitToCharacters = () => {
+export const splitToNumbers = () => {
     const splittedRows = splitToRows();
-    return splittedRows.map((row) => row.split(''));
+    return splittedRows.map((row) =>
+        row.split('').map((char) => parseInt(char)),
+    );
 };

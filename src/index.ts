@@ -1,3 +1,3 @@
-import { getResult } from './day10';
+import { step1result } from './day11';
 
-console.log(getResult());
+step1result;
