@@ -5,6 +5,8 @@ export class FlashChecker {
 
     numberOfPhase: number;
 
+    currentPhase: number = 0;
+
     result: number = 0;
 
     constructor(field: number[][], numberOfPhase: number) {
@@ -13,11 +15,13 @@ export class FlashChecker {
     }
 
     countResult() {
-        for (let i = 0; i < this.numberOfPhase; i++) {
+        while (this.result !== this.field.flat().length) {
+            this.result = 0;
+            this.currentPhase += 1;
             this.increaseByOne();
             this.increaseAroundNine();
         }
-        console.log(this.result);
+        return this.currentPhase;
     }
 
     increaseByOne() {
