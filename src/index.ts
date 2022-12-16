@@ -1,3 +1,3 @@
-import maxValue from './day1/index';
+import { getTotalScore } from './day2/index';
 
-console.log(maxValue);
+console.log(getTotalScore());
