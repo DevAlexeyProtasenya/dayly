@@ -1,3 +1,3 @@
-import { step1result } from './day11';
+import maxValue from './day1/index';
 
-console.log(step1result);
+console.log(maxValue);
