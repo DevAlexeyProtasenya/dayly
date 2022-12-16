@@ -1,3 +1,3 @@
-import { getTotalScore } from './day2/index';
+import res from './day3';
 
-console.log(getTotalScore());
+console.log(res);

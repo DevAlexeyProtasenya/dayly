@@ -8,15 +8,10 @@ const retrieveData = (relativePath: string): string => {
     return data.toString();
 };
 
-const splitToRows = (): Array<string> => {
+export const splitToRows = (): string[] => {
     const retrievedData = retrieveData(DATA_PATH);
     const rows: Array<string> = retrievedData
         .replace(/(\r\n|\r|\n)/gm, '/')
         .split('/');
     return rows;
-};
-
-export const splitByPair = () => {
-    const splittedRows = splitToRows();
-    return splittedRows.map((row) => row.split(' '));
 };
