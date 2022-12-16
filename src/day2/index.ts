@@ -8,30 +8,30 @@ const getGameScore = (pair: [OpponentChoose, PlayerChoose]) => {
     switch (opponentChoose) {
         case OpponentChoose.Paper:
             switch (playerChoose) {
-                case PlayerChoose.Paper:
-                    return 2 + 3;
-                case PlayerChoose.Rock:
+                case PlayerChoose.Loose:
                     return 1 + 0;
-                case PlayerChoose.Scissors:
+                case PlayerChoose.Draw:
+                    return 2 + 3;
+                case PlayerChoose.Win:
                     return 3 + 6;
             }
         case OpponentChoose.Rock:
             switch (playerChoose) {
-                case PlayerChoose.Paper:
-                    return 2 + 6;
-                case PlayerChoose.Rock:
-                    return 1 + 3;
-                case PlayerChoose.Scissors:
+                case PlayerChoose.Loose:
                     return 3 + 0;
+                case PlayerChoose.Draw:
+                    return 1 + 3;
+                case PlayerChoose.Win:
+                    return 2 + 6;
             }
         case OpponentChoose.Scissors:
             switch (playerChoose) {
-                case PlayerChoose.Paper:
+                case PlayerChoose.Loose:
                     return 2 + 0;
-                case PlayerChoose.Rock:
-                    return 1 + 6;
-                case PlayerChoose.Scissors:
+                case PlayerChoose.Draw:
                     return 3 + 3;
+                case PlayerChoose.Win:
+                    return 1 + 6;
             }
     }
 };

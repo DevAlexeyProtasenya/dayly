@@ -5,7 +5,7 @@ export enum OpponentChoose {
 }
 
 export enum PlayerChoose {
-    Rock = 'X',
-    Paper = 'Y',
-    Scissors = 'Z',
+    Loose = 'X',
+    Draw = 'Y',
+    Win = 'Z',
 }
