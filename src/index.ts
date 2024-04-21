@@ -1,3 +1,3 @@
-import result from './day6/part2';
+import result from '../src/2023/day1/part2/index';
 
-result;
+console.log(result());

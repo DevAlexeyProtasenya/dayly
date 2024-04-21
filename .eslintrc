@@ -11,7 +11,7 @@
     "prettier"
   ],
   "rules": {
-    "no-console": 1,
+    "no-console": "off",
     "prettier/prettier": 2
   },
   "env": {

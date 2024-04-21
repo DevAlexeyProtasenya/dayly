@@ -6,9 +6,5 @@ export const retrieveData = (relativePath: string): string => {
   return data.toString();
 };
 
-export const parseToArray = (data: string): Array<string> => {
-  const parsedData: Array<string> = data
-    .replace(/(\r\n|\r|\n)/gm, '/')
-    .split('/');
-  return parsedData;
-};
+export const parseToArray = (data: string): Array<string> =>
+  data.replace(/(\r\n|\r|\n)/gm, '/').split('/');
